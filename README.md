@@ -11,13 +11,15 @@ L’application permet de réaliser les opérations CRUD :
 Ajouter un étudiant
 Rechercher un étudiant
 Supprimer un étudiant
+
 🎯 Objectifs
 Comprendre l’utilisation de SQLite dans Android
 Implémenter un CRUD complet
 Structurer une application en couches
 Tester avec Logcat et interface graphique
 Analyser la sécurité avec MobSF
-🏗️ Architecture
+
+ Architecture
 L’application suit une architecture en couches :
 MainActivity (UI)
 ↓
@@ -26,42 +28,5 @@ EtudiantService (Logique CRUD)
 MySQLiteHelper (SQLite)
 ↓
 Base de données
-📂 Structure du projet
-projet.ensa.ma.app.lab15
-│
-├── classes
-│   └── Etudiant.java
-│
-├── service
-│   └── EtudiantService.java
-│
-├── util
-│   └── MySQLiteHelper.java
-│
-└── MainActivity.java
-📦 Description des composants
-🔹 Etudiant.java
-Classe modèle représentant un étudiant :
-id : clé primaire auto-incrémentée
-nom : nom de l’étudiant
-prenom : prénom de l’étudiant
 
-🔹 MySQLiteHelper.java
-Gère la base de données SQLite :
-Création de la base ecole.db
-Création de la table etudiant
-Gestion des mises à jour
 
-🔹 EtudiantService.java
-Implémente les opérations CRUD :
-create() → insertion
-findById() → recherche par ID
-findAll() → liste complète
-delete() → suppression
-update() → modification
-
-🔹 MainActivity.java
-Interface utilisateur permettant :
-Ajouter un étudiant
-Chercher par ID
-Supprimer un étudiant
